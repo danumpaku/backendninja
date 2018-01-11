@@ -2,20 +2,27 @@
 banner:
   location: classpath:/banners/banner.txt
 
-#spring:
+spring:
+#  Base de datos local
 #  datasource:
-#    url: jdbc:mysql://localhost:3306/backendninja # JDBC url of the database.
-#    username: cs_spring # Login user of the database.
-#    password: cs_spring # Login password of the database.
-# 
-#  jpa:
-#    show-sql: true # Enable logging of SQL statements.
-#    hibernate:
-#      ddl-auto: update # DDL mode. This is actually a shortcut for the "hibernate.hbm2ddl.auto" property. Default to "create-drop" when using an embedded database, "none" otherwise.
-#      naming: 
-#        strategy: org.hibernate.cfg.ImprovedNamingStrategy# Hibernate 4 naming strategy fully qualified name. Not supported with Hibernate 5.
-#    properties: 
-#      hibernate: 
-#        dialect: org.hibernate.dialect.MySQL5Dialect
+#    url: jdbc:mysql://localhost:3306/backendninja
+#    username: cs_spring
+#    password: cs_spring
+   
+# Base de datos web 
+  datasource:
+    url: jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10215139
+    username: sql10215139
+    password: tYXSVIjjzZ
+ 
+  jpa:
+    show-sql: true # Enable logging of SQL statements.
+    hibernate:
+      ddl-auto: update # DDL mode. This is actually a shortcut for the "hibernate.hbm2ddl.auto" property. Default to "create-drop" when using an embedded database, "none" otherwise.
+      naming: 
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy# Hibernate 4 naming strategy fully qualified name. Not supported with Hibernate 5.
+    properties: 
+      hibernate: 
+        dialect: org.hibernate.dialect.MySQL5Dialect
 
 
