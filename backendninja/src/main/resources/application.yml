@@ -5,13 +5,13 @@ banner:
 spring:
 #  Base de datos local
 #  datasource:
-#    url: jdbc:mysql://localhost:3306/backendninja
+#    url: jdbc:mysql://localhost:3306/backendninja?useSSL=false
 #    username: cs_spring
 #    password: cs_spring
    
 # Base de datos web 
   datasource:
-    url: jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10215139
+    url: jdbc:mysql://sql10.freemysqlhosting.net:3306/sql10215139?useSSL=false
     username: sql10215139
     password: tYXSVIjjzZ
  
