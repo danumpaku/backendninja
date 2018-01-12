@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ExampleComponent {
 
 	public final Log logger = LogFactory.getLog(ExampleComponent.class);
-	
+		
 	public void sayHello(){
 		logger.info("[sayHello] Creado ExampleComponent");
 	}
