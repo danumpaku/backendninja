@@ -2,6 +2,8 @@ package com.udemy.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,12 +13,17 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.udemy.constants.ViewConstants;
 import com.udemy.model.UserCredential;
+import com.udemy.services.quotes.QuotesService;
 
 @Controller
 public class LoginController {
 	
 	public static Log logger = LogFactory.getLog(LoginController.class); 
 
+	@Autowired
+	@Qualifier("quoteService")
+	private QuotesService quoteService;
+	
 	@GetMapping("/")
 	public String redirectLogin(){
 		logger.info("[redirectLogin] redirigiendo a Login");
